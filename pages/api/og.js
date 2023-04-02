@@ -13,7 +13,7 @@ export default async function handler(req) {
   const [ClashDisplayData] = await Promise.all([ClashDisplay])
 
   const { searchParams } = req.nextUrl
-  const title = searchParams.get('title') || 'face2'
+  const title = searchParams.get('title') || 'A1ITFirm'
 
   return new ImageResponse(
     (
