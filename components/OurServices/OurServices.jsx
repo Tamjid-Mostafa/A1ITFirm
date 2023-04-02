@@ -17,7 +17,7 @@ const OurServices = () => {
             Services
           </span>
         </h1>
-        <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-x-10 gap-y-10 mt-20 mx-24">
+        <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-10 mt-20 ">
           {SERVICE_DATA.slice(0, 4).map((service, index) => (
            <ServiceCard key={index} service={service}/>
           ))}
