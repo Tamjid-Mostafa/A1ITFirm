@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Head />
+    
       <ManagedUIContext>
         <Layout pageProps={pageProps}>
           <LazyMotion features={domAnimation}>

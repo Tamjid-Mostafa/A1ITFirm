@@ -7,8 +7,10 @@ import { useRouter } from 'next/router'
 import Sidebar from '@components/ui/Sidebar'
 import MenuSidebarView from '../Navbar/MenuSidebarView'
 import { useUI } from '@components/ui/context'
+import Meta from 'Meta/Meta'
 
 const Layout = ({
+  meta,
   children,
   pageProps: { categories = [], ...pageProps },
 }) => {
@@ -17,6 +19,7 @@ const Layout = ({
   
   return (
     <div className={cn(s.root)}>
+      <Meta {...meta} />
       {router.pathname !== '/404' && (
         <>
         {
