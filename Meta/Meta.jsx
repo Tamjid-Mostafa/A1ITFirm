@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const DOMAIN = "https://a1itfirm.vercel.app/";
+const DOMAIN = "https://a1itfirm.vercel.app";
 
 export default function Meta({
     title = "A1ITFirm | Best Lead Generation Agency",
