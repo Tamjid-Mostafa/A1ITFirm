@@ -6,13 +6,13 @@ export default function Logo(params) {
         <div className="flex flex-col items-center py-2">
             <Image
                 src="/logo.png"
-                alt="Face2"
+                alt="A1ITFirm"
                 width={64}
                 height={64}
                 quality='85'
                 className=""
             />
-            <h1 className="text-3xl font-bold text-primary tracking-widest">Face2</h1>
+            <h1 className="text-3xl font-bold text-primary tracking-widest">A1ITFirm</h1>
         </div>
     )
 };
