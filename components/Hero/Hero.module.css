@@ -1,5 +1,5 @@
 .root {
-  @apply relative;;
+  @apply relative;
 }
 .container {
   @apply relative  flex  w-full justify-center items-center lg:text-start text-center lg:p-0 py-10;
