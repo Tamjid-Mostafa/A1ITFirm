@@ -16,7 +16,9 @@ const Newsletter = () => {
                     <Image
                         width={720}
                         height={720}
-                        src={'/newslater.svg'}
+                        quality={100}
+                        priority
+                        src={'/newsletter.svg'}
                         alt={'Newsletter'}
                     />
                 </div>
