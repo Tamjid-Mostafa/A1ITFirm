@@ -1,0 +1,10 @@
+.root {
+  @apply w-full appearance-none border border-accent-3 bg-primary py-2 px-6 pr-10 text-accent-7 transition duration-150 ease-in-out;
+}
+
+.root:focus {
+  @apply shadow-outline-normal outline-none;
+}
+.textarea {
+  @apply h-[150px] border
+}

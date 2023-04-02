@@ -1,0 +1,9 @@
+.root {
+  @apply relative my-10;
+}
+.container {
+  @apply relative  sm:flex block w-full justify-between items-center lg:text-start text-center lg:p-0 gap-10;
+}
+.content {
+  @apply space-y-10 w-full px-5 lg:mb-10 text-start ;
+}

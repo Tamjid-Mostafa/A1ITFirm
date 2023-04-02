@@ -1,0 +1,25 @@
+{
+  "title": "Quick Fintech | Developed by AppSynergies",
+  "titleTemplate": "%s - AppSynergies",
+  "description": "AppSynergies is a fast-growing SaaS-based start-up with a very talented and rapidly expanding team. We develop cutting-edge AI driven Social, FinTech, PropTech & EdTech Apps.",
+  "openGraph": {
+    "title": "Quick Fintech | Developed by AppSynergies",
+    "description": "AppSynergies is a fast-growing SaaS-based start-up with a very talented and rapidly expanding team. We develop cutting-edge AI driven Social, FinTech, PropTech & EdTech Apps.",
+    "type": "website",
+    "url": "https://appsynergies.com",
+    "site_name": "Quick Fintech",
+    "images": [
+      {
+        "url": "/card.png",
+        "width": "800",
+        "height": "600",
+        "alt": "Quick Fintech"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@quick-fintech",
+    "site": "@quick-fintech",
+    "cardType": "summary_large_image"
+  }
+}

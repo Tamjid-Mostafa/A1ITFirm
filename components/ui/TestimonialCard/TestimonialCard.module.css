@@ -1,0 +1,15 @@
+.root {
+  @apply relative bg-primary mx-auto my-20   lg:w-[90%] w-[80%];
+  height: 371px;
+  border: 1px solid #808080;
+  border-radius: 8px;
+}
+.content {
+  @apply p-5 flex flex-col justify-between h-full;
+}
+.reviews {
+  @apply relative;
+}
+.avatar {
+  @apply flex  items-center space-x-2 w-full h-full;
+}

@@ -1,0 +1,4 @@
+.root {
+  @apply h-full  mx-auto transition-all duration-150 font-ClashDisplay-Regular;
+  max-width: 2460px;
+}

@@ -1,0 +1,35 @@
+.root {
+  @apply overflow-hidden relative w-full bg-[#226478];
+}
+.main {
+  @apply md:flex block w-full justify-between;
+}
+.content {
+  @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-10 items-start justify-center py-10;
+}
+.content ul {
+  @apply space-y-4 text-accent-1;
+}
+.logopart {
+  @apply text-accent-1 space-y-10 my-10;
+}
+.logo {
+  @apply flex flex-col items-center w-[50%] space-y-2;
+}
+.logo span {
+  @apply text-3xl;
+}
+.logo span sup {
+  @apply text-xs;
+}
+.slogan {
+  @apply text-2xl ;
+}
+.description {
+  @apply text-lg w-[70%];
+}
+.copyright {
+  @apply text-lg text-accent-1 w-full text-center;
+  height: 31px;
+background: rgba(217, 217, 217, 0.15);
+}

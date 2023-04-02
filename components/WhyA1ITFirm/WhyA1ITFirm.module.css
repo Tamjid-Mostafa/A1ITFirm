@@ -1,0 +1,16 @@
+.root {
+    @apply relative;
+    background-color: white;
+  }
+  .container {
+  @apply relative lg:flex block w-full justify-center items-center  gap-10 lg:text-start text-center min-h-[80vh] py-10
+  }
+  .content {
+    @apply space-y-10 lg:w-[60%] lg:mb-10 ;
+    }
+  .title {
+    @apply font-ClashDisplay-Bold md:text-4xl sm:text-4xl text-2xl font-bold md:leading-[74px] leading-tight text-accent-9 ;
+  }
+  .description {
+    @apply  md:text-xl text-lg font-ClashDisplay-Regular text-accent-9 leading-tight md:leading-[30px];
+  }

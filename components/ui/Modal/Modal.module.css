@@ -1,0 +1,17 @@
+.root {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40;
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+}
+
+.modal {
+  @apply relative border border-accent-2 bg-primary p-12;
+}
+
+.modal:focus {
+  @apply outline-none;
+}
+
+.close {
+  @apply absolute right-0 top-0 m-6 transition duration-150 ease-in-out hover:text-accent-5 focus:outline-none;
+}

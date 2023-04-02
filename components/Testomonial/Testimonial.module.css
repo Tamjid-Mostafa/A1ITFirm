@@ -1,0 +1,8 @@
+.root {
+    @apply relative bg-[#E7F5F2];
+    
+  }
+
+  .container {
+    @apply flex flex-col justify-center items-center py-20;
+  }

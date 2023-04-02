@@ -1,0 +1,26 @@
+.root {
+  @apply relative;
+  background: linear-gradient(169.66deg, #226478 0%, #30C7B5 100%);
+}
+.container {
+@apply relative  lg:flex block w-full justify-center items-center lg:text-start text-center lg:p-0 py-10;
+}
+.backdrop {
+  position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0.12%;
+
+background: linear-gradient(90.4deg, rgba(0, 0, 0, 0.88) 0.95%, rgba(0, 0, 0, 0.76) 44.49%, rgba(0, 0, 0, 0) 99.68%);
+}
+.content {
+  @apply space-y-10 w-full lg:my-10 mx-5 z-20;
+  
+  }
+.title {
+  @apply font-ClashDisplay-Bold md:text-5xl text-4xl font-bold md:leading-[54px] tracking-wider leading-tight text-white lg:w-[50%] w-full lg:text-start text-center;
+}
+.description {
+  @apply font-ClashDisplay-Extralight md:text-xl text-lg font-normal text-white leading-tight md:leading-[30px] lg:w-[60%] w-full lg:text-start text-center;
+}
