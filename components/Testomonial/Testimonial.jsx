@@ -5,13 +5,12 @@ import s from './Testimonial.module.css'
 import Text from '@components/ui/Text'
 import TestimonialCard from '@components/ui/TestimonialCard'
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay, FreeMode } from 'swiper';
+import { Pagination, Scrollbar, A11y, Autoplay, FreeMode } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const Testimonial = () => {
   const testimonial = [
@@ -68,10 +67,9 @@ const Testimonial = () => {
        <div className='w-full h-full flex justify-center'>
        <Swiper
           // install Swiper modules
-          modules={[Navigation, Pagination, A11y, Autoplay, FreeMode]}
+          modules={[Pagination, A11y, Autoplay, FreeMode]}
           spaceBetween={10}
           slidesPerView={1}
-          navigation
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,

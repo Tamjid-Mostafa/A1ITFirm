@@ -65,7 +65,7 @@ export default function DemoForm() {
       } else {
         axios
           .post(
-            "https://us-central1-nurturewise-19575.cloudfunctions.net/NurtureWiseApis/demo",
+            "",
             {
               date: value.date,
               time: value.time,
@@ -194,23 +194,7 @@ export default function DemoForm() {
                 value={value.phone}
                 onChange={(e) => setValue({ ...value, phone: e.target.value })}
               />
-              <select
-                className={`border border-[#BDBDBD] px-4 py-3 bg-white rounded-lg text-[#616161] max-w-[360px]`}
-                placeholder="Role"
-                required
-                value={value.role}
-                onChange={(e) => setValue({ ...value, role: e.target.value })}
-              >
-                <option value="none" disabled hidden>
-                  Role
-                </option>
-                <option value="Childcare service provider">
-                  Childcare service provider
-                </option>
-                <option value="Parent">Parent</option>
-                <option value="School official">School official</option>
-                <option value="Student">Student</option>
-              </select>
+             
               <div className="max-w-[300px] flex gap-4 items-start">
                 <input
                   className="mt-1"
@@ -224,7 +208,7 @@ export default function DemoForm() {
                   }
                 />
                 <label className="text-xs font-medium" htmlFor="check">
-                  I acknowledge that Quick Fintech uses my personal information in
+                  I acknowledge that A1ITFirm uses my personal information in
                   accordance with its&nbsp;&nbsp;
                   <Link
                     href="/privacy-policy"

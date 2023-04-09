@@ -52,7 +52,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 cursor-pointer"
           >
             <Image width={32} height={32} className="" src="/logo.png" alt="" />
-            <span className="self-center text-2xl whitespace-nowrap font-ClashDisplay-Semibold text-accent-6">
+            <span className="self-center text-2xl whitespace-nowrap  text-accent-6">
               A1ITFirm
             </span>
           </div>
@@ -88,7 +88,6 @@ const Navbar = () => {
                     <Link
                       href={link.href}
                       className="text-lg text-accent-8"
-                      activeClassName="text-green"
                     >
                       {link.label}
                     </Link>

@@ -3,14 +3,14 @@
 }
 
 .heading {
-  @apply mb-2 cursor-pointer pt-1 pb-2 text-5xl font-semibold tracking-wide font-ClashDisplay-Semibold;
+  @apply mb-2 cursor-pointer pt-1 pb-2 text-5xl font-semibold tracking-wide ;
 }
 .newsletter {
-  @apply mb-2 cursor-pointer pt-1 pb-2 text-4xl font-semibold tracking-wide font-ClashDisplay-Semibold;
+  @apply mb-2 cursor-pointer pt-1 pb-2 text-4xl font-semibold tracking-wide ;
 }
 
 .pageHeading {
-  @apply pt-1 pb-4 text-2xl font-bold leading-7 tracking-wide font-ClashDisplay-Light;
+  @apply pt-1 pb-4 text-2xl font-bold leading-7 tracking-wide;
 }
 
 .sectionHeading {

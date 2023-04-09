@@ -9,8 +9,8 @@
     @apply space-y-10 lg:w-[60%] lg:mb-10 ;
     }
   .title {
-    @apply font-ClashDisplay-Bold md:text-4xl sm:text-4xl text-2xl font-bold md:leading-[74px] leading-tight text-accent-9 ;
+    @apply  md:text-4xl sm:text-4xl text-2xl font-bold md:leading-[74px] leading-tight text-accent-9 ;
   }
   .description {
-    @apply  md:text-xl text-lg font-ClashDisplay-Regular text-accent-9 leading-tight md:leading-[30px];
+    @apply  md:text-xl text-lg  text-accent-9 leading-tight md:leading-[30px];
   }

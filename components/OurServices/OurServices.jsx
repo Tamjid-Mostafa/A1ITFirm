@@ -11,7 +11,7 @@ const OurServices = () => {
   return (
     <div className="py-20 bg-[#E7F5F2]">
       <Container>
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-ClashDisplay-Bold text-black">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center text-black">
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#347DBA] to-[#5DB9A8]">
             Services

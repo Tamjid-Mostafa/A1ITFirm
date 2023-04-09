@@ -10,7 +10,7 @@ const Vision = () => {
     <div  className={cn(s.root)}>
       <Container className="mx-auto justify-center items-center py-20">
         <div className="text-center">
-          <p className=" text-4xl font-ClashDisplay-Semibold">
+          <p className=" text-4xl ">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#347DBA] to-[#5DB9A8]">Vision</span>
           </p>
         </div>

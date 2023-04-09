@@ -10,7 +10,7 @@ const Demo = () => {
   return (
     <div className="lg:flex justify-between w-[95%] sm:w-[90%] md:w-[80%] lg:w-[90%] xl:w-[65%] mx-auto py-20">
       <div className="flex flex-col justify-center items-center">
-        <p className="text-4xl font-ClashDisplay-Semibold">
+        <p className="text-4xl ">
           Book a{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#347DBA] to-[#5DB9A8]">
             DEMO
@@ -18,7 +18,7 @@ const Demo = () => {
           to understand <br /> what A1ITFirm is all about.
         </p>
         <Image
-          className="pt-10"
+          className="pt-10 md:hidden"
           height={433}
           width={433}
           src="/demo-banner.svg"

@@ -1,13 +1,12 @@
 import ServiceCard from '@components/ui/ServiceCard/ServiceCard';
 import { SERVICE_DATA } from 'data/constant';
-import Image from 'next/image';
 import React from 'react';
 
 const Our_Services = () => {
     return (
         <div className="py-20 bg-[#E7F5F2]">
       <div>
-        <p className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-center font-ClashDisplay-Bold text-black">
+        <p className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-center  text-black">
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#347DBA] to-[#5DB9A8]">
             Services

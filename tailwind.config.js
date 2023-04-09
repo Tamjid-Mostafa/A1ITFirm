@@ -14,14 +14,6 @@ module.exports = {
       maxWidth: {
         "8xl": "1920px",
       },
-      fontFamily: {
-        "ClashDisplay-Extralight": "ClashDisplay-Extralight",
-        "ClashDisplay-Light": "ClashDisplay-Light",
-        "ClashDisplay-Regular": "ClashDisplay-Regular",
-        "ClashDisplay-Medium": "ClashDisplay-Medium",
-        "ClashDisplay-Semibold": "ClashDisplay-Semibold",
-        "ClashDisplay-Bold": "ClashDisplay-Bold",
-      },
       colors: {
         primary: "var(--primary)",
         "primary-2": "var(--primary-2)",

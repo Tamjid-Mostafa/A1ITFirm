@@ -17,8 +17,8 @@
   @apply space-y-10 w-full lg:my-10 mx-5 z-20;
 }
 .title {
-  @apply font-ClashDisplay-Bold md:text-5xl text-4xl font-bold md:leading-[54px] tracking-wider leading-tight text-white lg:w-[50%] w-full lg:text-start text-center;
+  @apply  md:text-5xl text-4xl font-bold md:leading-[54px] tracking-wider leading-tight text-white lg:w-[50%] w-full lg:text-start text-center;
 }
 .description {
-  @apply font-ClashDisplay-Extralight md:text-xl text-lg font-normal text-white leading-tight md:leading-[30px] lg:w-[60%] w-full lg:text-start text-center;
+  @apply  md:text-xl text-lg font-normal text-white leading-tight md:leading-[30px] lg:w-[60%] w-full lg:text-start text-center;
 }
