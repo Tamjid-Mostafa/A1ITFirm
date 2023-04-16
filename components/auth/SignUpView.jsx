@@ -6,7 +6,8 @@ import hitToast from '@components/ui/Toast/hitToast'
 import { AuthContext } from 'context/AuthProvider'
 import { validate } from 'email-validator'
 import Image from 'next/image'
-import { FC, useEffect, useState, useCallback, useContext } from 'react'
+import { useRouter } from 'next/router'
+import { useEffect, useState, useCallback, useContext } from 'react'
 
 
 
@@ -20,7 +21,7 @@ const SignUpView = () => {
   const [message, setMessage] = useState('')
   const [dirty, setDirty] = useState(false)
   const [disabled, setDisabled] = useState(false)
-
+  const router = useRouter()
   const { signUpUser } = useContext(AuthContext)
   const { setModalView, closeModal } = useUI()
 
@@ -30,12 +31,13 @@ const SignUpView = () => {
     if (!dirty && !disabled) {
       setDirty(true)
       handleValidation()
+      return
     }
     try {
       setLoading(true)
       setMessage('')
-      const result = await signUpUser(email, password)
-      console.log(result);
+      await signUpUser(email, password)
+
       closeModal()
       hitToast('success', `Hi! ${firstName}, Welcome to A1ITFirm`)
     } catch ({ errors }) {
@@ -49,6 +51,7 @@ const SignUpView = () => {
     } finally {
       setLoading(false)
     }
+   
   }
 
   const handleValidation = useCallback(() => {

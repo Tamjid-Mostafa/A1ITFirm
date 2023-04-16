@@ -15,7 +15,8 @@ const PrivateRoute = ({ children }) => {
   }
 
   if (!user && !user?.uid) {
-    router.push('/any')
+    router.replace('/')
+    openModal()
   }
   return children
 }
