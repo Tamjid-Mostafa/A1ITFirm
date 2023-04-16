@@ -14,6 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import BG from '@components/ui/BG/BG'
+import { useUI } from '@components/ui/context'
 export const hero = [
     {
         title: 'Unlock Your Business Potential with Our Lead Generation Service!',
@@ -32,9 +33,7 @@ export const hero = [
     }
 ]
 const Hero = () => {
-
-
- 
+    const {openModal} = useUI()
 
     return (
         <main className={cn(s.root)}>
@@ -72,6 +71,7 @@ const Hero = () => {
                                         </Balancer>
                                     </p>
                                     <Button 
+                                    onClick={() => openModal()}
                                     className="hover:text-white"
                                     variant='gradient'>
                                         Request Demo

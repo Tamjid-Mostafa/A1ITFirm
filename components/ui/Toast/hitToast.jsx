@@ -2,7 +2,7 @@ import { toast } from 'react-toastify';
 const hitToast = (variant, message) => {
     if (!['success', 'error'].includes(variant)) throw Error();
     toast[`${variant}`](message, {
-        position: "top-right",
+        position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,

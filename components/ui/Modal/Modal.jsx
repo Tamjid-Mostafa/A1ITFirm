@@ -1,8 +1,8 @@
-import Cross from '@/components/layout/icons/Cross'
 import s from './Modal.module.css'
-import FocusTrap from '@/lib/focus-trap'
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock'
 import { useRef, useEffect, useCallback } from 'react'
+import { Cross } from '@components/icons'
+import FocusTrap from '@lib/focus-trap'
 
 
 

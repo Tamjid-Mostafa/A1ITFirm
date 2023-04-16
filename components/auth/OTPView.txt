@@ -1,0 +1,155 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { useContext, useEffect, useState } from 'react'
+import Button from '../ui/Button'
+import { useUI } from '../ui/context'
+import Input from '../ui/Input'
+import { AuthContext } from 'context/AuthProvider'
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
+import hitToast from '../ui/Button/Toast/hitToast'
+const OTPView = () => {
+
+    const [loading, setLoading] = useState(false)
+    const [confirmObj, setConfirmObj] = useState('')
+    const [flag, setFlag] = useState(false)
+    const [disabled, setDisabled] = useState(false)
+    const [value, setValue] = useState();
+    const [otp, setOtp] = useState();
+    const [error, setError] = useState('')
+    const { setModalView, closeModal } = useUI()
+    const { createUser, user } = useContext(AuthContext)
+
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+
+        if (value === "" || value === undefined)
+            return setError("Please enter a valid number!")
+        try {
+            setLoading(true);
+            setError("")
+            const result = await createUser(value)
+            setConfirmObj(result);
+            setFlag(true);
+            setLoading(false);
+            console.log(result)
+            hitToast('success', "OTP Sent Successfully. Please check your message")
+        } catch (err) {
+            setError(err.message)
+            hitToast('error', "Something went wrong. Please try again later")
+        }
+        console.log(value)
+    };
+
+    const verifyOtp = async (e) => {
+        e.preventDefault();
+        if (otp === "" || otp === null) return;
+        try {
+            setLoading(true);
+            setError("")
+            const result = await confirmObj.confirm(otp)
+            setLoading(false);
+        } catch (err) {
+            setError(err.message)
+        }
+        //     return setError("Please enter a valid number!")
+
+        // if (value === "" || value === undefined)
+        //     return setError("Please enter a valid number!")
+        // try {
+        //     setLoading(true);
+        //     setError("")
+        //     const result = await createUser(value)
+        //     console.log(result);
+        // } catch (err) {
+        //     setError(err.message)
+        // }
+        // console.log(value)
+    };
+
+    return (
+        <>
+            <div
+                className="w-80 flex flex-col justify-between p-3"
+
+            >
+                <div className="flex justify-center pb-12 ">
+                    {/* --- Logo Start--- */}
+
+                    <Image
+                        src="/logo.png"
+                        alt="Face2"
+                        width={80}
+                        height={100}
+                        className=""
+                        priority
+                    />
+
+                    {/* --- Logo End--- */}
+                </div>
+                <form
+                    onSubmit={handleSignUp}
+                    className={` flex-col space-y-3 ${!flag ? 'flex' : 'hidden'}`}
+                >
+                    <PhoneInput
+                        international
+                        countryCallingCodeEditable={false}
+                        defaultCountry="BD"
+                        value={value}
+                        onChange={setValue}
+                        className=""
+                    />
+                    {error && (
+                        <div className="text-red border border-red p-3">
+                            {error}
+                        </div>
+                    )}
+                    <div id='recaptcha-container' />
+                    <Button
+                        variant="slim"
+                        type="submit"
+                        className="bg-accent-9"
+                        loading={loading}
+                        disabled={disabled}
+                    >
+                        Get OTP
+                    </Button>
+                    <div className="pt-1 text-center text-sm">
+                        <span className="text-accent-7">Login by Using: </span>
+                        {` `}
+                        <a
+                            className="text-accent-9 font-bold hover:underline cursor-pointer"
+                            onClick={() => setModalView('LOGIN_VIEW')}
+                        >
+                            Email
+                        </a>
+                    </div>
+                </form>
+
+                <form
+                    onSubmit={verifyOtp}
+                    className={` flex-col space-y-3 ${flag ? 'flex' : 'hidden'}`}
+                >
+                    <Input placeholder="Enter OTP" onChange={setOtp} />
+                    {error && (
+                        <div className="text-red border border-red p-3">
+                            {error}
+                        </div>
+                    )}
+                    <div id='recaptcha-container' />
+                    <Button
+                        variant="slim"
+                        type="submit"
+                        className="bg-accent-9"
+                        loading={loading}
+                        disabled={disabled}
+                    >
+                        Verify OTP
+                    </Button>
+                </form>
+            </div>
+        </>
+    )
+}
+
+export default OTPView

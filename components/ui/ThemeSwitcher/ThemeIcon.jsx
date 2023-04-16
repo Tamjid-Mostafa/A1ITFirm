@@ -1,6 +1,6 @@
-import Moon from "@/components/layout/icons/Moon"
-import Sun from "@/components/layout/icons/Sun"
-import System from "@/components/layout/icons/System"
+import Moon from "@components/layout/icons/Moon"
+import Sun from "@components/layout/icons/Sun"
+import System from "@components/layout/icons/System"
 
 
 

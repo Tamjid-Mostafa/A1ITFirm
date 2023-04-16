@@ -2,15 +2,25 @@
 import SidebarLayout from '@components/common/SidebarLayout'
 import Button from '@components/ui/Button'
 import { useUI } from '@components/ui/context'
+import useWindowSize from '@lib/hooks/use-window-size'
+import { AuthContext } from 'context/AuthProvider'
 import Link from 'next/link'
+import { useContext } from 'react'
 import s from './MenuSidebarView.module.css'
 
 
 export default function MenuSidebarView({
   links = [],
 }) {
-  const { closeSidebar } = useUI()
+  const { isDesktop} = useWindowSize()
 
+  const { closeSidebar } = useUI()
+  const { user, logOut } = useContext(AuthContext);
+
+  if(isDesktop) {
+    closeSidebar()
+  }
+  
   return (
     <SidebarLayout handleClose={() => closeSidebar()}>
       <div className={s.root}>
@@ -26,11 +36,27 @@ export default function MenuSidebarView({
                 <Link href={l.href}>{l.label}</Link>
               </li>
             ))}
-            <li className='md:hidden block'>
+            <li className='flex flex-col gap-5 mt-5'>
               <Button
-                className="rounded-full bg-secondary-2" variant={'slim'}>
-                Get Started
+                className="" variant={'slim'}>
+                Request Demo
               </Button>
+              {
+                  user && user?.uid ?
+                    <Button
+                      onClick={() => logOut()}
+                      variant={"slim"}
+                    >
+                      Log Out
+                    </Button>
+                    :
+                    <Button
+                      onClick={() => openModal()}
+                      variant={"slim"}
+                    >
+                      Log In
+                    </Button>
+                }
             </li>
           </ul>
         </nav>

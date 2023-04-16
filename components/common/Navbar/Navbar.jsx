@@ -3,17 +3,19 @@ import Container from "@components/ui/Container";
 import { useUI } from "@components/ui/context";
 import MenuButton from "@components/ui/MenuButton";
 import Sidebar from "@components/ui/Sidebar";
+import { AuthContext } from "context/AuthProvider";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-import React, { useState } from "react";
+import cn from 'clsx'
+import React, { useContext, useState } from "react";
 import MenuSidebarView from "./MenuSidebarView";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const { closeSidebarIfPresent, setSidebarView, openSidebar } = useUI();
+  const { closeSidebarIfPresent, setSidebarView, openSidebar, openModal } = useUI();
+  const { user, logOut } = useContext(AuthContext)
   const categories = [
     { name: "Services", slug: "our-services" },
     { name: "About", slug: "about" },
@@ -48,7 +50,7 @@ const Navbar = () => {
         <div className="flex flex-wrap items-center justify-between mx-auto  h-[80px] ">
           {/* Logo Here */}
           <div
-            onClick={() => router.push("/")}
+            onClick={() => router.push('/')}
             className="flex items-center space-x-2 cursor-pointer"
           >
             <Image width={32} height={32} className="" src="/logo.png" alt="" />
@@ -61,16 +63,29 @@ const Navbar = () => {
 
           <div className="flex flex-row-reverse gap-8">
             <div className="flex">
-              <div className="md:block hidden">
+              <div className="md:flex gap-5 hidden ">
                 <Button
-                  onClick={() => {
-                    router.push("/demo");
-                  }}
-                  className="rounded-full bg-secondary-2"
+                  className=""
                   variant={"slim"}
                 >
                   Request a Demo
                 </Button>
+                {
+                  user && user?.uid ?
+                    <Button
+                      onClick={() => logOut()}
+                      variant={"slim"}
+                    >
+                      Log Out
+                    </Button>
+                    :
+                    <Button
+                      onClick={() => openModal()}
+                      variant={"slim"}
+                    >
+                      Log In
+                    </Button>
+                }
               </div>
               <MenuButton
                 onClick={() => {
@@ -98,7 +113,9 @@ const Navbar = () => {
           </div>
         </div>
       </Container>
-      <SidebarUI links={navBarlinks} />
+      <div className={cn('md:hidden')}>
+        <SidebarUI links={navBarlinks} />
+      </div>
     </nav>
   );
 };
