@@ -75,8 +75,8 @@ const Proposal = () => {
             setDirty(true)
             setDisabled(false)
             hitToast('success', res.data.message)
-            if(res.statusText === 'OK') {
-                closeModal()
+            closeModal()
+            if(res.status=== 200) {
             }
         } catch (err) {
             console.error(err)
