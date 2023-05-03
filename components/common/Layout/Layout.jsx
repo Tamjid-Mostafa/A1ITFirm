@@ -40,12 +40,12 @@ const Layout = ({
   //     ...dynamicProps,
   //   }
   // )
-  // const OTPView = dynamic(
-  //   () => import('@components/auth/OTPView'),
-  //   {
-  //     ...dynamicProps,
-  //   }
-  // )
+  const Proposal = dynamic(
+    () => import('@components/Proposal'),
+    {
+      ...dynamicProps,
+    }
+  )
   const Modal = dynamic(() => import('@components/ui/Modal'), {
     ...dynamicProps,
     ssr: true,
@@ -56,9 +56,10 @@ const Layout = ({
   }) => {
     return (
       <Modal onClose={closeModal}>
-        {modalView === 'LOGIN_VIEW' && <LoginView />}
+        {/* {modalView === 'LOGIN_VIEW' && <LoginView />}
         {modalView === 'SIGNUP_VIEW' && <SignUpView />}
-        {modalView === 'FORGOT_VIEW' && <ForgotPassword />}
+        {modalView === 'FORGOT_VIEW' && <ForgotPassword />} */}
+        {modalView === 'PROPOSAL_VIEW' && <Proposal/> }
       </Modal>
     )
   }

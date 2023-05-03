@@ -12,9 +12,8 @@ import React, { useContext, useState } from "react";
 import MenuSidebarView from "./MenuSidebarView";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const { closeSidebarIfPresent, setSidebarView, openSidebar, openModal } = useUI();
+  const { setSidebarView, openSidebar, openModal } = useUI();
   const { user, logOut } = useContext(AuthContext)
   const categories = [
     { name: "Services", slug: "our-services" },
@@ -65,12 +64,13 @@ const Navbar = () => {
             <div className="flex">
               <div className="md:flex gap-5 hidden ">
                 <Button
-                  className=""
+                  onClick={() => openModal()}
                   variant={"slim"}
+                  className="rounded-full border-none"
                 >
-                  Request a Demo
+                  Request Proposal
                 </Button>
-                {
+                {/* {
                   user && user?.uid ?
                     <Button
                       onClick={() => logOut()}
@@ -83,9 +83,9 @@ const Navbar = () => {
                       onClick={() => openModal()}
                       variant={"slim"}
                     >
-                      Log In
+                      Request Proposal
                     </Button>
-                }
+                } */}
               </div>
               <MenuButton
                 onClick={() => {

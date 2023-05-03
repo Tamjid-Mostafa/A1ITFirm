@@ -7,11 +7,9 @@ const UserSchema = new Schema(
     },
     email: {
       type: String,
-      unique: true,
     },
     phone: {
       type: Number,
-      unique: true,
     },
     photoURL: {
       type: String,

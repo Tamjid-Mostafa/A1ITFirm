@@ -1,36 +1,38 @@
+import React from 'react';
+import cn from 'clsx';
+import s from './Input.module.css';
 
-import React from 'react'
-import cn from 'clsx'
-import s from './Input.module.css'
-
-
-const Input = (
-  { className,
-    children,
-    onChange,
-    variant = 'input',
-    ...rest
-  }
-) => {
-
-
-
-  const rootClassName = cn(s.root, {
-    [s.input]: variant === 'input',
-    [s.textarea]: variant === 'textarea',
-  }, className)
+const Input = ({ className, children, onChange, variant = 'input', ...rest }) => {
+  const rootClassName = cn(
+    s.root,
+    {
+      [s.input]: variant === 'input',
+      [s.textarea]: variant === 'textarea',
+      [s.checkbox]: variant === 'checkbox', // Add checkbox style if needed
+    },
+    className
+  );
 
   const handleOnChange = (e) => {
     if (onChange) {
-      onChange(e.target.value)
+      // Handle checkbox value differently
+      if (variant === 'checkbox') {
+        onChange(e.target.checked);
+      } else {
+        onChange(e.target.value);
+      }
     }
-    return null
-  }
+    return null;
+  };
+
   const componentsMap = {
     input: 'input',
-    textarea: 'textarea'
-  }
-  const Component = componentsMap[variant]
+    textarea: 'textarea',
+    checkbox: 'input', // Map 'checkbox' variant to 'input'
+  };
+
+  const Component = componentsMap[variant];
+
   return (
     <label>
       <Component
@@ -40,10 +42,11 @@ const Input = (
         autoCorrect="off"
         autoCapitalize="off"
         spellCheck="false"
+        {...(variant === 'checkbox' ? { type: 'checkbox' } : {})} // Set 'type' attribute for checkbox
         {...rest}
       />
     </label>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;

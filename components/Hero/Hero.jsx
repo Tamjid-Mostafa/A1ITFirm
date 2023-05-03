@@ -72,9 +72,9 @@ const Hero = () => {
                                     </p>
                                     <Button 
                                     onClick={() => openModal()}
-                                    className="hover:text-white"
+                                    className="hover:text-white border-none"
                                     variant='gradient'>
-                                        Request Demo
+                                          Request Proposal
                                     </Button>
                                 </div>
                                {/* <Image
