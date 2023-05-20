@@ -1,11 +1,11 @@
-import { AuthContext } from "@/context/AuthProvider";
-import Input from "@/components/ui/Input";
-import Button from "@/components/ui/Button";
-import { useRouter } from "next/router";
-import Logo from "@/components/ui/Logo/Logo";
-import hitToast from "@/components/ui/Toast/hitToast";
-import Text from "@/components/ui/Text";
+import Button from "@components/ui/Button";
+import Input from "@components/ui/Input";
+import Logo from "@components/ui/Logo/Logo";
+import Text from "@components/ui/Text";
+import hitToast from "@components/ui/Toast/hitToast";
+import { AuthContext } from "context/AuthProvider";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useContext, useState } from "react";
 
 const Login = () => {
@@ -33,7 +33,7 @@ const Login = () => {
       setLoading(true);
       setMessage("");
       await signIn(email, password);
-      hitToast("success", `Welcome to Edlighten`);
+      hitToast("success", `Welcome to A1ITFirm`);
       router.push("/");
     } catch ({ errors }) {
       console.error(errors);

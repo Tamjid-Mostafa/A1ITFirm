@@ -1,13 +1,14 @@
-import { Info } from "@/components/icons";
-import Button from "@/components/ui/Button";
-import Input from "@/components/ui/Input";
-import Logo from "@/components/ui/Logo/Logo";
-import Text from "@/components/ui/Text";
-import hitToast from "@/components/ui/Toast/hitToast";
-import { AuthContext } from "@/context/AuthProvider";
+import { Info } from "@components/icons";
+import Button from "@components/ui/Button";
+import Input from "@components/ui/Input";
+import Logo from "@components/ui/Logo/Logo";
+import Text from "@components/ui/Text";
+import hitToast from "@components/ui/Toast/hitToast";
+import { AuthContext } from "context/AuthProvider";
 import { validate } from "email-validator";
 import { useRouter } from "next/router";
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
+
 
 const Signup = () => {
   // Form State
@@ -36,7 +37,7 @@ const Signup = () => {
       setLoading(true);
       setMessage("");
       await signUpUser(email, password);
-      hitToast("success", `Hi! ${firstName}, Welcome to Edlighten`);
+      hitToast("success", `Hi! ${firstName}, Welcome to A1ITFirm`);
       router.push("");
     } catch ({ errors }) {
       console.error(errors);
