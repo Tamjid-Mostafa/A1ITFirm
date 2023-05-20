@@ -1,9 +1,10 @@
-// helpers/emailHelper.js
 import nodemailer from 'nodemailer';
 
 export async function sendEmail(to, subject, htmlContent) {
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // You can use other email services like Yahoo, Outlook, etc.
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true,  // use SSL
     auth: {
       user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_PASSWORD,

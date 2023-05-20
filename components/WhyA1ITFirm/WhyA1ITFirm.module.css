@@ -1,6 +1,5 @@
 .root {
     @apply relative;
-    background-color: white;
   }
   .container {
   @apply relative lg:flex block w-full justify-center items-center  gap-10 lg:text-start text-center min-h-[80vh] py-10

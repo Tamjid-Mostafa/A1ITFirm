@@ -17,7 +17,7 @@
   @apply mb-2 cursor-pointer pt-1 pb-2 text-2xl font-bold tracking-wide;
 }
 .logo {
-  @apply mb-2 cursor-pointer text-4xl font-bold tracking-wide;
+  @apply mb-2 cursor-pointer text-[40px] font-bold tracking-wide;
 }
 
 /* Apply base font sizes and styles for typography markup (h2, h2, ul, p, etc.).

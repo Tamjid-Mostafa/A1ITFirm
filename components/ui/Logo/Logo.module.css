@@ -1,0 +1,19 @@
+.img {
+  width: 45px;
+  height: 61px;
+}
+.imgSmall {
+  width: 31.15px;
+  height: 42.23px;
+}
+.logoContainer {
+  @apply flex items-center gap-4 p-5;
+}
+
+.logoTextSmall {
+  @apply text-[#293FCC] font-bold text-2xl;
+}
+
+.logoText {
+  @apply text-[#293FCC] font-bold text-4xl;
+}

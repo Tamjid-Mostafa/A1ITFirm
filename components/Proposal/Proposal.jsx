@@ -45,10 +45,10 @@ const Proposal = () => {
         setDirty(true) // Set dirty state to true when a field is changed
     }
     const services = [
-        'B2B Lead Generation',
-        'LinkedIn Lead Generation',
-        'E-Commerce Lead generation',
-        'Influencer Leads',
+        'Lead Generation',
+        'Search Engine Optimization',
+        'Email Marketing',
+        'Web Design & Development',
     ]
 
     const handleSubmit = async (e) => {
@@ -67,7 +67,6 @@ const Proposal = () => {
             lastName,
             phoneNumber,
             companyName,
-
             checkboxValue,
         }
         try {

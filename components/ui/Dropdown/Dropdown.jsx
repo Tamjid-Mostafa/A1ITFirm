@@ -1,18 +1,36 @@
-import cn from 'clsx'
-import React from 'react'
-import s from './Dropdown.module.css'
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
+import React, { useState } from 'react';
+import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 
-export const Dropdown = DropdownMenu.Root
-export const DropdownMenuItem = DropdownMenu.Item
-export const DropdownTrigger = DropdownMenu.Trigger
-export const DropdownMenuLabel = DropdownMenu.Label
-export const DropdownMenuGroup = DropdownMenu.Group
+const Dropdown = ({ items, label, onChange }) => {
+    const [selectedItem, setSelectedItem] = useState('');
 
-export const DropdownContent = React.forwardRef(function DropdownContent({ children, className, ...props }, forwardedRef) {
-  return (
-    <DropdownMenu.Content ref={forwardedRef} sideOffset={8} {...props}>
-      <div className={cn(s.root, className)}>{children}</div>
-    </DropdownMenu.Content>
-  )
-})
+    const handleChange = (event) => {
+        setSelectedItem(event.target.value);
+        if (onChange) {
+            onChange(event.target.value);
+        }
+    };
+
+    return (
+        <FormControl variant="standard" sx={{
+            minWidth: 100
+        }}>
+            <InputLabel id="dropdown-label">{label}</InputLabel>
+            <Select
+                labelId="dropdown-label"
+                id="dropdown"
+                value={selectedItem}
+                onChange={handleChange}
+                label={label}
+            >
+                {items.map((item, index) => (
+                    <MenuItem key={index} value={item.value}>
+                        {item.label}
+                    </MenuItem>
+                ))}
+            </Select>
+        </FormControl>
+    );
+};
+
+export default Dropdown;

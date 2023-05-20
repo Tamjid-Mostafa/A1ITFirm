@@ -1,5 +1,6 @@
 .root {
-  @apply relative bg-primary mx-auto my-20   lg:w-[90%] w-[80%];
+  @apply relative bg-primary mx-10 my-20 lg:w-[90%] w-[80%];
+  width: 371px;
   height: 371px;
   border: 1px solid #808080;
   border-radius: 8px;

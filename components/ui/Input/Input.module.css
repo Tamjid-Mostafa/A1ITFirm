@@ -1,5 +1,5 @@
 .root {
-  @apply w-full appearance-none border border-accent-3 bg-primary text-accent-7 transition duration-150 ease-in-out;
+  @apply w-full appearance-none border border-gray-700 bg-white text-gray-700 transition duration-150 ease-in-out;
 }
 
 .root:focus {
@@ -12,13 +12,13 @@
   @apply py-2 px-6 pr-10  h-[150px] border
 }
 .checkbox {
-  @apply appearance-none h-5 w-5 border border-accent-3 bg-primary transition duration-150 ease-in-out cursor-pointer;
+  @apply appearance-none h-5 w-5 border border-gray-300 bg-white transition duration-150 ease-in-out cursor-pointer;
 }
 
 .checkbox:checked {
-  @apply bg-accent-3;
+  @apply bg-gray-300;
 }
 
 .checkbox:focus {
-  @apply shadow-outline-normal outline-none;
+  @apply outline-none;
 }

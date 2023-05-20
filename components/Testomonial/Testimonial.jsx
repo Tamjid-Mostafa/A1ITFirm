@@ -4,14 +4,18 @@ import cn from 'clsx'
 import s from './Testimonial.module.css'
 import Text from '@components/ui/Text'
 import TestimonialCard from '@components/ui/TestimonialCard'
-// import Swiper core and required modules
-import { Pagination, Scrollbar, A11y, Autoplay, FreeMode } from 'swiper';
+import Marquee from 'react-fast-marquee'
+import ParallaxMarquee from '@components/ParalaxComponent/ParallaxComponent '
+import GradientSVG from '@components/ui/BG/GradientSVG'
+// // import Swiper core and required modules
+// import { Pagination, Scrollbar, A11y, Autoplay, FreeMode } from 'swiper';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+// // Import Swiper styles
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+
 const Testimonial = () => {
   const testimonial = [
     {
@@ -56,16 +60,17 @@ const Testimonial = () => {
     <div
       className={cn(s.root, '')}
     >
+      
       <Container className={cn(s.container, 'py-10')}>
         <div className='w-50%'>
           <Text variant='newsletter'>
             Still on the fence, here’s what{' '}
-            <span className={cn('text-transparent bg-clip-text bg-gradient-to-b from-[#347DBA] to-[#5DB9A8]')}>our users</span> are saying
+            <span className={cn('text-transparent bg-clip-text bg-gradient-to-b from-blue to-cyan')}>our clients</span> are saying
           </Text>
 
         </div>
-       <div className='w-full h-full flex justify-center'>
-       <Swiper
+        <div className='w-full h-full flex justify-center'>
+          {/* <Swiper
           // install Swiper modules
           modules={[Pagination, A11y, Autoplay, FreeMode]}
           spaceBetween={10}
@@ -100,9 +105,15 @@ const Testimonial = () => {
             }
             )
           }
-        </Swiper>
-       </div>
+        </Swiper> */}
+         
+        </div>
       </Container>
+      <ParallaxMarquee start={2000} end={-2000}>
+      {testimonial.map((item, index) => (
+        <TestimonialCard key={index} item={item} />
+      ))}
+    </ParallaxMarquee>
     </div>
   )
 }

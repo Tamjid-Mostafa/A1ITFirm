@@ -5,7 +5,7 @@
 }
 
 .modal {
-  @apply relative border border-accent-2 bg-primary p-12;
+  @apply relative border border-gray-200 bg-white p-12;
 }
 
 .modal:focus {
@@ -13,5 +13,5 @@
 }
 
 .close {
-  @apply absolute right-0 top-0 m-6 transition duration-150 ease-in-out hover:text-accent-5 focus:outline-none;
+  @apply absolute right-0 top-0 m-6 transition duration-150 ease-in-out hover:text-gray-500 focus:outline-none;
 }

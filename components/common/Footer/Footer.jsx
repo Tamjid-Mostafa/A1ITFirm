@@ -14,32 +14,32 @@ const Footer = () => {
       title: 'About Us',
       href: '/about-us',
     },
-    {
-      title: 'Press & Media',
-      href: '/press&media',
-    },
-    {
-      title: 'Privacy Policy',
-      href: '/privacy-policy',
-    },
-    {
-      title: 'Cookie Policy',
-      href: '/cookie-policy',
-    },
-    {
-      title: 'Terms of Services',
-      href: '/terms-of-services',
-    },
-    {
-      title: 'Data Protection',
-      href: '/data-protection',
-    },
+    // {
+    //   title: 'Press & Media',
+    //   href: '/press&media',
+    // },
+    // {
+    //   title: 'Privacy Policy',
+    //   href: '/privacy-policy',
+    // },
+    // {
+    //   title: 'Cookie Policy',
+    //   href: '/cookie-policy',
+    // },
+    // {
+    //   title: 'Terms of Services',
+    //   href: '/terms-of-services',
+    // },
+    // {
+    //   title: 'Data Protection',
+    //   href: '/data-protection',
+    // },
   ]
   const support = [
-    {
-      title: 'Help Center',
-      href: '/help-center',
-    },
+    // {
+    //   title: 'Help Center',
+    //   href: '/help-center',
+    // },
     {
       title: 'FAQs',
       href: '/faqs',
@@ -86,28 +86,16 @@ const Footer = () => {
       <div className={cn(s.root)}>
         <Container className={cn(s.main)}>
           <div className={cn(s.logopart)}>
-            <div className={cn(s.logo)}>
-              <Link href="/">
-                <Image
-                  width={250}
-                  height={100}
-                  src="/logo.png"
-                  alt="A1ITFirm"
-                />
-              </Link>
-              <span>
-                A1ITFirm
-                <sup>TM</sup>
-              </span>
-            </div>
-            <div className={cn(s.slogan)}>
-              Online Banking Solutions
-            </div>
-            <div className={cn(s.description)}>
-              <Balancer>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley
-              </Balancer>
-            </div>
+            {/* Logo Here */}
+          <div
+            onClick={() => router.push('/')}
+            className="cursor-pointer"
+          >
+            <Image width={200} height={32} className="my-5" src="/logo.png" alt="" />
+            <span className="text-6xl whitespace-nowrap  text-accent-0">
+              A1ITFirm
+            </span>
+          </div>
           </div>
           <div className={cn(s.content)}>
             <ul className="">

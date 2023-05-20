@@ -23,7 +23,7 @@ const Newsletter = () => {
                     />
                 </div>
                 <div className={cn(s.content, "w-[100%]")}>
-                    <Text variant='newsletter' >Signup for our <span className='text-transparent bg-clip-text bg-gradient-to-b from-[#347DBA] to-[#5DB9A8]'>newsletter</span> to get latest updates</Text>
+                    <Text variant='newsletter' >Signup for our <span className='text-transparent bg-clip-text bg-gradient-to-b from-blue to-cyan'>newsletter</span> to get latest updates</Text>
                     <div className=' flex flex-col space-y-5 sm:w-[60%] w-full'>
                         <Input
                             placeholder='Full Name'

@@ -1,5 +1,5 @@
 .root {
-  @apply overflow-hidden relative w-full bg-accent-5;
+  @apply overflow-hidden relative w-full bg-accent-8;
 }
 .main {
   @apply md:flex block w-full justify-between;

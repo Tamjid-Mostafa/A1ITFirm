@@ -24,11 +24,11 @@
 }
 
 .slim {
-  @apply transform-none py-2 normal-case bg-gradient-to-b from-[#347DBA] to-[#5DB9A8];
+  @apply transform-none py-2 normal-case bg-blue;
 }
 
 .ghost {
-  @apply border border-accent-2 bg-accent-0 text-sm text-accent-9;
+  @apply border border-accent-2 bg-accent-1 text-sm text-accent-9;
 }
 
 .ghost:hover {

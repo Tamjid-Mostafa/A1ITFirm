@@ -2,14 +2,13 @@ import Button from "@components/ui/Button/Button";
 import Container from "@components/ui/Container";
 import ServiceCard from "@components/ui/ServiceCard/ServiceCard";
 import { SERVICE_DATA } from "data/constant";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
 const OurServices = () => {
   const router = useRouter();
   return (
-    <div className="py-20 bg-[#E7F5F2]">
+    <>
       <Container>
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center text-black">
           Our{" "}
@@ -30,7 +29,7 @@ const OurServices = () => {
           </Button>
         </div>
       </Container>
-    </div>
+    </>
   );
 };
 

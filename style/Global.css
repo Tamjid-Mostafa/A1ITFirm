@@ -1,40 +1,149 @@
 .react-calendar {
-    border-color: #bdbdbd !important;
-    border-radius: 15px !important;
-    padding: 20px !important;
-    font-family: "Montserrat", sans-serif !important;
-    min-width: 280px !important;
-  }
-  .react-calendar__month-view__days__day--weekend,
-  .react-calendar__month-view__days__day {
-    color: #9e9e9e !important;
-    font-size: 14px !important;
-  }
-  .react-calendar__navigation__prev2-button,
-  .react-calendar__navigation__next2-button {
-    display: none !important;
-  }
-  .react-calendar__tile--active {
-    background-color: #8251a0 !important;
-    color: white !important;
-    border-radius: 25px;
-  }
-  .react-calendar__tile--now:enabled {
-    /* background-color: #8251a0 !important; */
-    border-radius: 50px !important;
-    color: rgb(183, 183, 183) !important;
-  }
-  .react-calendar__tile:enabled:hover {
-    border-radius: 50px !important;
-  }
-  .react-calendar__month-view__weekdays {
-    padding-bottom: 20px !important;
-  }
-  .react-calendar__navigation button:disabled,
-  .react-calendar__tile:disabled {
-    background-color: #f9f9f9 !important;
-    cursor: not-allowed;
-  }
-  .react-calendar__tile--now {
-    background-color: red;
-  }
+  border-color: #bdbdbd !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  font-family: "Montserrat", sans-serif !important;
+  min-width: 280px !important;
+}
+.react-calendar__month-view__days__day--weekend,
+.react-calendar__month-view__days__day {
+  color: #9e9e9e !important;
+  font-size: 14px !important;
+}
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none !important;
+}
+.react-calendar__tile--active {
+  background-color: #8251a0 !important;
+  color: white !important;
+  border-radius: 25px;
+}
+.react-calendar__tile--now:enabled {
+  /* background-color: #8251a0 !important; */
+  border-radius: 50px !important;
+  color: rgb(183, 183, 183) !important;
+}
+.react-calendar__tile:enabled:hover {
+  border-radius: 50px !important;
+}
+.react-calendar__month-view__weekdays {
+  padding-bottom: 20px !important;
+}
+.react-calendar__navigation button:disabled,
+.react-calendar__tile:disabled {
+  background-color: #f9f9f9 !important;
+  cursor: not-allowed;
+}
+.react-calendar__tile--now {
+  background-color: red;
+}
+
+.gradient-01 {
+  position: absolute;
+  width: 500px;
+  height: 900px;
+  right: 10%;
+  top: 25%;
+  background: rgba(108, 248, 115, 0.1);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+.gradient-03 {
+  position: absolute;
+  width: 500px;
+  height: 900px;
+  left: 30%;
+  top: 10%;
+  background: rgba(108, 248, 115, 0.1);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+}
+.rectangle {
+  position: absolute;
+  width: 1596.24px;
+  height: 1147.92px;
+  left: 310.38px;
+  top: -591.45px;
+
+  background: #e7f5ff;
+  border-radius: 50px;
+  transform: matrix(0.9, 0.44, -0.47, 0.88, 0, 0);
+}
+.rectangle2 {
+  position: absolute;
+  width: 1705.1px;
+  height: 907.82px;
+  left: -50%;
+  top: 35%;
+  background: linear-gradient(
+    282.22deg,
+    #e7f5ff 15.22%,
+    rgba(245, 242, 253, 0) 85.08%,
+    rgba(231, 245, 255, 0.5) 85.08%
+  );
+  border-radius: 50px;
+  transform: matrix(0.9, 0.44, -0.47, 0.88, 0, 0);
+  z-index: -1;
+}
+
+.gradient-02 {
+  position: absolute;
+  width: 200px;
+  height: 438px;
+  top: 0px;
+  right: 0px;
+  background: #7aebfb;
+  filter: blur(190px);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(23, 103, 35, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navglassmorphism {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(23, 103, 35, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(6px);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.18); */
+  border-bottom: 1px solid;
+  border-image: linear-gradient(270deg, #374df4 0%, #5dd67b 100%);
+  border-image-slice: 1;
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 60vh;
+  left: 30%;
+  top: 10%;
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient-05 {
+  position: absolute;
+  width: 104px;
+  height: 60vh;
+  left: 45%;
+  top: 45%;
+  background: rgba(25, 125,50, 0.75);
+  filter: blur(200px);
+  transform: rotate(45deg);
+}
+.gradient-06 {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  top: 20%;
+  left: 20%;
+  background: radial-gradient(circle, rgb(0, 121, 246,0.3) 0%, rgb(0, 121, 246,0.5) 100%);
+  border-radius: 50%;
+  filter: blur(110px);
+}

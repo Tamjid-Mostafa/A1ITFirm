@@ -1,18 +1,26 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import cn from 'clsx'
+import s from './Logo.module.css'
 
-export default function Logo(params) {
+export default function Logo({variant=''}) {
     return (
-        <div className="flex flex-col items-center py-2">
+        <div className={s.logoContainer}>
             <Image
-                src="/logo.png"
-                alt="A1ITFirm"
-                width={64}
-                height={64}
-                quality='85'
-                className=""
+                width={100}
+                height={100}
+                className={cn({
+                    [s.imgSmall]: variant === 'small',
+                    [s.img]: variant === ''
+                })}
+                src={"/logo.svg"}
+                alt="logo"
+                priority
             />
-            <h1 className="text-3xl font-bold text-primary tracking-widest">A1ITFirm</h1>
+            <h1 className={cn({
+                [s.logoTextSmall]: variant === 'small',
+                [s.logoText]: variant === ''
+            })}>Edlighten.ai</h1>
         </div>
+
     )
-};
+}
