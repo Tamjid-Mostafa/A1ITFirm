@@ -92,7 +92,7 @@ export const SUPPORT_ACCORDION_DATA = [
     {
         name: 'Samir Ahmed',
         title: 'Team Head',
-        image: '/samir.jpg',
+        image: '/Shojol5rr.png',
         email: 'shojol@a1itfirm.com',
         linkedin: 'https://www.linkedin.com/in/samir-ahmed-s-2918b2217/'
     },
@@ -106,7 +106,7 @@ export const SUPPORT_ACCORDION_DATA = [
     {
         name: 'Anas Khan',
         title: 'Business Promotions Manager',
-        image: '/boy.png',
+        image: '/anas.jpg',
         email: 'anas@a1itfirm.com',
         linkedin: 'https://www.linkedin.com/in/anas-khan-2a251b231/'
     },

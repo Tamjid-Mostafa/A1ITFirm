@@ -65,14 +65,14 @@ const Footer = () => {
     {
       title: 'LinkedIn',
       icon: '/linkedin.svg',
-      href: 'https://www.linkedin.com/',
+      href: 'https://www.linkedin.com/company/a1itfirm/',
     },
   ]
   const contact = [
     {
-      title: '+880 1997-407041',
+      title: '+880 1819-946104',
       icon: '/telephone.svg',
-      href: 'tel:+880 1997-407041',
+      href: 'tel:+880 1819-946104',
     },
     {
       title: 'contact@a1itfirm.com',
@@ -132,13 +132,14 @@ const Footer = () => {
                     <Link
                       href={item.href}
                       className="flex gap-2 items-center "
+                      target={'_blank'}
                     >
                       <span className=''>
                         <Image
                           width={20}
                           height={21}
                           src={item.icon}
-                          alt='Envelop'
+                          alt={item.title}
                           className=''
                         />
                       </span>
@@ -156,7 +157,7 @@ const Footer = () => {
                 {
                   social.map((item, index) => (
                     <div key={index}>
-                      <Link href={item.href}>
+                      <Link href={item.href} target="_blank">
                         <Image
                           width={40}
                           height={40}

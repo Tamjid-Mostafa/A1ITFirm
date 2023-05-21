@@ -13,7 +13,10 @@ const TeamCard = ({ item }) => {
           src={item?.image}
           alt={item?.name}
           quality={100}
-          className="rounded-full"
+          className="rounded-full w-72 h-72"
+          style={{
+            objectFit: 'cover'
+          }}
         />
       </div>
       <div className="my-10 text-center">
