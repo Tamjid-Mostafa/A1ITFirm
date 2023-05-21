@@ -12,14 +12,14 @@ import s from './MenuSidebarView.module.css'
 export default function MenuSidebarView({
   links = [],
 }) {
-  const { isDesktop} = useWindowSize()
+  const { isDesktop } = useWindowSize()
 
-  const { closeSidebar } = useUI()
+  const { openModal, closeSidebar } = useUI()
 
-  if(isDesktop) {
+  if (isDesktop) {
     closeSidebar()
   }
-  
+
   return (
     <SidebarLayout handleClose={() => closeSidebar()}>
       <div className={s.root}>
@@ -37,7 +37,10 @@ export default function MenuSidebarView({
             ))}
             <li className='flex flex-col gap-5 mt-5'>
               <Button
-                className="" variant={'slim'}>
+                className=""
+                variant={'slim'}
+                onClick={() => openModal()}
+              >
                 Request Demo
               </Button>
               {/* {

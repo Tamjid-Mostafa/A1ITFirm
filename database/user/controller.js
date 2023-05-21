@@ -75,7 +75,7 @@ export async function postProposal(req, res) {
 
     await sendEmail(userEmail, emailSubject, emailContent);
 
-    res.status(200).json({ message: 'Proposal submitted successfully' });
+    res.status(200).json({ message: 'Proposal submitted successfully. We will contact you ASAP' });
   } catch (error) {
     res.status(404).json({ error: 'Error While Fetching Data' })
   }

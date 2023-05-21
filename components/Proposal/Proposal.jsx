@@ -28,8 +28,9 @@ const Proposal = () => {
     const [message, setMessage] = useState('')
     const [dirty, setDirty] = useState(false)
     const [disabled, setDisabled] = useState(false)
+    const [loading, setLoading] = useState(false)
 
-    const {closeModal} = useUI()
+    const { closeModal } = useUI()
     const handleChange = (field, value) => {
         if (field === 'checkboxValue') {
             setFormValues((prevValues) => {
@@ -52,6 +53,7 @@ const Proposal = () => {
     ]
 
     const handleSubmit = async (e) => {
+        setLoading(true)
         e.preventDefault()
         if (disabled) {
             return // Prevent submission if the form is disabled due to validation failure
@@ -70,12 +72,13 @@ const Proposal = () => {
             checkboxValue,
         }
         try {
-            const res = await axios.post('/api/proposals',data)
-            setDirty(true)
-            setDisabled(false)
-            hitToast('success', res.data.message)
-            closeModal()
-            if(res.status=== 200) {
+            const res = await axios.post('/api/proposals', data)
+            if (res.status === 200) {
+                setDirty(true)
+                setDisabled(false)
+                setLoading(true)
+                hitToast('success', res.data.message)
+                closeModal()
             }
         } catch (err) {
             console.error(err)
@@ -193,6 +196,7 @@ const Proposal = () => {
                         type="submit"
                         className="bg-accent-9 border-none"
                         disabled={disabled}
+                        loading={loading}
                     >
                         Submit Proposal
                     </Button>

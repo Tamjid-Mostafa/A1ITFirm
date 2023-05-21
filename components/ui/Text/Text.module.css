@@ -3,18 +3,18 @@
 }
 
 .heading {
-  @apply mb-2 cursor-pointer pt-1 pb-2 text-5xl font-semibold tracking-wide ;
+  @apply mb-2 cursor-pointer pt-1 pb-2 md:text-5xl text-3xl font-semibold tracking-wide ;
 }
 .newsletter {
   @apply mb-2 cursor-pointer pt-1 pb-2 text-4xl font-semibold tracking-wide ;
 }
 
 .pageHeading {
-  @apply pt-1 pb-4 text-2xl font-bold leading-7 tracking-wide;
+  @apply pt-1 pb-4 md:text-2xl text-lg font-bold leading-7 tracking-wide;
 }
 
 .sectionHeading {
-  @apply mb-2 cursor-pointer pt-1 pb-2 text-2xl font-bold tracking-wide;
+  @apply mb-2 cursor-pointer pt-1 pb-2 md:text-2xl text-xl font-bold tracking-wide;
 }
 .logo {
   @apply mb-2 cursor-pointer text-[40px] font-bold tracking-wide;

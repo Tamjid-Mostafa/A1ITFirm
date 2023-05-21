@@ -1,8 +1,6 @@
 .root {
-  @apply relative bg-primary mx-5 my-20 lg:w-[90%] w-[80%];
-  width: 371px;
-  height: 371px;
-  border: 1px solid #808080;
+  @apply relative bg-primary mx-5 my-20 lg:w-[371px] lg:h-[371px] h-[400px] w-72 ;
+  border: 1px solid #293FCC;
   border-radius: 8px;
 }
 .content {
