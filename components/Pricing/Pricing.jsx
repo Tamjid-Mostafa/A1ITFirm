@@ -12,7 +12,7 @@ function Pricing() {
             icon: LeadGeneration,
             title: "Lead Generation",
             qty: "Per Lead",
-            price: "$0.05",
+            price: "$0.20",
             description: ["Speak with us direct.", "Tell us what you need.", "Start receiving leads 48 hours later."],
             buttonLabel: "Request Proposal"
         },

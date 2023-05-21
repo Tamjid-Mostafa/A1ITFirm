@@ -121,7 +121,7 @@ const Proposal = () => {
         >
             <div className="flex justify-center pb-12">
                 <Image
-                    src="/logo.png"
+                    src="/logo.svg"
                     alt="Face2"
                     width={80}
                     height={100}

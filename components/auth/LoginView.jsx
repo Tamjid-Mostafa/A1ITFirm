@@ -31,7 +31,7 @@ const LoginView = () => {
           await signIn(email, password)
     
           closeModal()
-          hitToast('success', `Hi! ${firstName}, Welcome to A1ITFirm`)
+          hitToast('success', `Hi! ${firstName}, Welcome to A1 IT Firm`)
         } catch ({ errors }) {
           console.error(errors)
           if (errors) {
@@ -68,7 +68,7 @@ const LoginView = () => {
                 {/* --- Logo Start--- */}
 
                 <Image
-                    src="/logo.png"
+                    src="/logo.svg"
                     alt="Face2"
                     width={80}
                     height={100}

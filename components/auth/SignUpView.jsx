@@ -39,7 +39,7 @@ const SignUpView = () => {
       await signUpUser(email, password)
 
       closeModal()
-      hitToast('success', `Hi! ${firstName}, Welcome to A1ITFirm`)
+      hitToast('success', `Hi! ${firstName}, Welcome to A1 IT Firm`)
     } catch ({ errors }) {
       console.error(errors)
       if (errors) {
@@ -77,7 +77,7 @@ const SignUpView = () => {
         {/* --- Logo Start--- */}
 
         <Image
-          src="/logo.png"
+          src="/logo.svg"
           alt="Face2"
           width={80}
           height={100}

@@ -50,7 +50,7 @@ const Footer = () => {
     {
       title: 'Facebook',
       icon: '/facebook.svg',
-      href: 'https://www.facebook.com/a1itfirm/',
+      href: 'https://www.facebook.com/A1 IT Firm/',
     },
     {
       title: 'Instagram',
@@ -65,7 +65,7 @@ const Footer = () => {
     {
       title: 'LinkedIn',
       icon: '/linkedin.svg',
-      href: 'https://www.linkedin.com/company/a1itfirm/',
+      href: 'https://www.linkedin.com/company/A1 IT Firm/',
     },
   ]
   const contact = [
@@ -75,9 +75,9 @@ const Footer = () => {
       href: 'tel:+880 1819-946104',
     },
     {
-      title: 'contact@a1itfirm.com',
+      title: 'contact@A1 IT Firm.com',
       icon: '/envelop.svg',
-      href: 'mailto:contact@a1itfirm.com',
+      href: 'mailto:contact@A1 IT Firm.com',
     },
   ]
 
@@ -91,9 +91,9 @@ const Footer = () => {
             onClick={() => router.push('/')}
             className="cursor-pointer"
           >
-            <Image width={200} height={32} className="my-5" src="/logo.png" alt="" />
+            <Image width={200} height={32} className="my-5" src="/logo.svg" alt="" />
             <span className="text-6xl whitespace-nowrap  text-accent-0">
-              A1ITFirm
+              A1 IT Firm
             </span>
           </div>
           </div>

@@ -44,8 +44,8 @@ const ForgotPassword = () => {
         {/* --- Logo Start--- */}
 
         <Image
-          src="/logo.png"
-          alt="face2.com.bd logo"
+          src="/logo.svg"
+          alt="A1 IT Firm logo"
           width="80"
           height="80"
           className="mr-2 rounded-sm"
