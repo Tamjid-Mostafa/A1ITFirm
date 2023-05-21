@@ -50,12 +50,12 @@ const Navbar = () => {
             onClick={() => router.push('/')}
             className="flex items-center space-x-2 cursor-pointer"
           >
-            <Image width={60} height={60} className=" " src="/logo.svg" alt="" />
-            <span className="self-center text-2xl whitespace-nowrap  text-accent-6">
+            <Image width={200} height={100} className=" " src="/logo.svg" alt="" />
+            {/* <span className="self-center text-3xl whitespace-nowrap  text-blue space-x-[1px] font-bold font-serif">
               <span>A1</span>
               <span>IT</span>
               <span>Firm</span>
-            </span>
+            </span> */}
           </div>
 
           {/* Navigation */}

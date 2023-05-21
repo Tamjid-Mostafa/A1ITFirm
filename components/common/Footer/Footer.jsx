@@ -89,12 +89,12 @@ const Footer = () => {
             {/* Logo Here */}
           <div
             onClick={() => router.push('/')}
-            className="cursor-pointer"
+            className="cursor-pointer flex items-center"
           >
-            <Image width={200} height={32} className="my-5" src="/logo.svg" alt="" />
-            <span className="text-6xl whitespace-nowrap  text-accent-0">
+            <Image width={300} height={100} className="my-10" src="/white_logo.svg" alt="" />
+            {/* <span className="text-6xl whitespace-nowrap  text-accent-0">
               A1 IT Firm
-            </span>
+            </span> */}
           </div>
           </div>
           <div className={cn(s.content)}>
