@@ -12,7 +12,6 @@ import useWindowSize from '@lib/hooks/use-window-size'
 const Hero = () => {
     const { openModal } = useUI()
     const { isMobile } = useWindowSize()
-    console.log(isMobile && "slim")
 
     return (
         <Container className={cn(s.root, 'z-10 fit flex flex-col lg:flex-row items-center')}>
