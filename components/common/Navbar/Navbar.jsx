@@ -8,15 +8,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import cn from 'clsx'
-import React, { useContext, useState } from "react";
+import React from "react";
 import MenuSidebarView from "./MenuSidebarView";
 
 const Navbar = () => {
   const router = useRouter();
   const { setSidebarView, openSidebar, openModal } = useUI();
-  const { user, logOut } = useContext(AuthContext)
   const categories = [
-    { name: "Services", slug: "our-services" },
     { name: "About", slug: "about" },
   ];
   const navBarlinks = categories.map((c) => ({

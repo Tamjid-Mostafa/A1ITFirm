@@ -15,7 +15,6 @@ export default function MenuSidebarView({
   const { isDesktop} = useWindowSize()
 
   const { closeSidebar } = useUI()
-  const { user, logOut } = useContext(AuthContext);
 
   if(isDesktop) {
     closeSidebar()
@@ -41,7 +40,7 @@ export default function MenuSidebarView({
                 className="" variant={'slim'}>
                 Request Demo
               </Button>
-              {
+              {/* {
                   user && user?.uid ?
                     <Button
                       onClick={() => logOut()}
@@ -56,7 +55,7 @@ export default function MenuSidebarView({
                     >
                       Log In
                     </Button>
-                }
+                } */}
             </li>
           </ul>
         </nav>
