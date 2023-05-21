@@ -9,7 +9,7 @@ import Text from "@components/ui/Text";
 const WhyA1ITFirm = () => {
   return (
     <Container className={cn(s.root, 'fit my-10 rounded-lg p-10')}>
-      <Text variant='heading' className='text-start text-4xl mb-5'>Why A1 IT Firm?</Text>
+      <Text Text variant='heading' className=''>Why A1 IT Firm?</Text>
       <div className="w-[30%] h-1 rounded bg-blue my-5" />
       <div className="flex flex-col-reverse lg:flex-row items-center lg:space-x-10 my-10">
         <div className="lg:w-1/2">

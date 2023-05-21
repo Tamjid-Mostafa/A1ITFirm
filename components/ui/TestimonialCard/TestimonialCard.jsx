@@ -3,7 +3,6 @@ import cn from 'clsx'
 import s from './TestimonialCard.module.css'
 import LeftQuote from '@components/icons/LeftQuote'
 import { RightQuote } from '@components/icons'
-import Image from 'next/image'
 import Avatar from '@components/common/Avatar'
 const TestimonialCard = ({ item }) => {
 
@@ -24,7 +23,7 @@ const TestimonialCard = ({ item }) => {
                         width={64}
                         height={64}
                         src={item?.avatar} alt={item?.name} /> */}
-                        <Avatar />
+                        {/* <Avatar /> */}
                         <div>
                             <div className={cn(s.name, '')}>
                                 {item?.name}

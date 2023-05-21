@@ -7,7 +7,7 @@ const ParallaxMarquee = ({ children, start, end }) => {
   const translateX = useTransform(scrollYProgress, [0, 1], [start, end])
 
   return (
-    <Marquee autoFill gradient gradientColor={[224, 242, 254]} speed={100} gradientWidth={100}>
+    <Marquee autoFill gradient gradientColor={[224, 242, 254]}  gradientWidth={100}>
       {React.Children.map(children, (child, index) => (
         <motion.div key={index} style={{ x: translateX }}>
           {child}
