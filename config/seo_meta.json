@@ -1,19 +1,19 @@
 {
-  "title": "A1ITFirm | Best Lead Generation Agency",
-  "titleTemplate": "%s - A1ITFirm",
-  "description": "A1ITFirm is a fast-growing start-up with a very talented and rapidly expanding team. We build hand picked lead list with 100% verified guaranty.",
+  "title": "A1 IT Firm | Best Lead Generation Agency",
+  "titleTemplate": "%s - A1 IT Firm",
+  "description": "A1 IT Firm is a fast-growing start-up with a very talented and rapidly expanding team. We build hand picked lead list with 100% verified guaranty.",
   "openGraph": {
-    "title": "A1ITFirm | Best Lead Generation Agency",
-    "description": "A1ITFirm is a fast-growing start-up with a very talented and rapidly expanding team. We build hand picked lead list with 100% verified guaranty.",
+    "title": "A1 IT Firm | Best Lead Generation Agency",
+    "description": "A1 IT Firm is a fast-growing start-up with a very talented and rapidly expanding team. We build hand picked lead list with 100% verified guaranty.",
     "type": "website",
-    "url": "https://A1ITFirm.com",
-    "site_name": "A1ITFirm",
+    "url": "https://a1itfirm.com",
+    "site_name": "A1 IT Firm",
     "images": [
       {
         "url": "/card.png",
         "width": "800",
         "height": "600",
-        "alt": "A1ITFirm"
+        "alt": "A1 IT Firm"
       }
     ]
   },

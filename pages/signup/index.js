@@ -37,7 +37,7 @@ const Signup = () => {
       setLoading(true);
       setMessage("");
       await signUpUser(email, password);
-      hitToast("success", `Hi! ${firstName}, Welcome to A1ITFirm`);
+      hitToast("success", `Hi! ${firstName}, Welcome to A1 IT Firm`);
       router.push("");
     } catch ({ errors }) {
       console.error(errors);

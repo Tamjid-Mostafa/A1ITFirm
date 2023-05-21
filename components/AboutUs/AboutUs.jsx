@@ -8,7 +8,7 @@ const AboutUs = () => {
       <Text variant='heading'>About Us</Text>
       <div className="w-[30%] h-1 rounded bg-blue my-5" />
       <p>
-        At A1iTFirm, we prioritize our clients&apos; growth and satisfaction above everything else. 
+        At A1 IT Firm, we prioritize our clients&apos; growth and satisfaction above everything else. 
         We leverage innovative technology, strategic creativity, and data-driven insights to 
         deliver results that exceed expectations. Our comprehensive suite of digital services 
         is designed to boost your business&apos;s online presence, engage your audience, and drive growth.

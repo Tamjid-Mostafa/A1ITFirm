@@ -50,7 +50,7 @@ const Footer = () => {
     {
       title: 'Facebook',
       icon: '/facebook.svg',
-      href: 'https://www.facebook.com/A1 IT Firm/',
+      href: 'https://www.facebook.com/a1itfirm/',
     },
     {
       title: 'Instagram',
@@ -65,7 +65,7 @@ const Footer = () => {
     {
       title: 'LinkedIn',
       icon: '/linkedin.svg',
-      href: 'https://www.linkedin.com/company/A1 IT Firm/',
+      href: 'https://www.linkedin.com/company/a1itfirm/',
     },
   ]
   const contact = [
@@ -75,9 +75,9 @@ const Footer = () => {
       href: 'tel:+880 1819-946104',
     },
     {
-      title: 'contact@A1 IT Firm.com',
+      title: 'contact@a1itfirm.com',
       icon: '/envelop.svg',
-      href: 'mailto:contact@A1 IT Firm.com',
+      href: 'mailto:contact@a1itfirm.com',
     },
   ]
 

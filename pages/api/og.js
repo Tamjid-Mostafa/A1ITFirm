@@ -13,7 +13,7 @@ export default async function handler(req) {
   const [ClashDisplayData] = await Promise.all([ClashDisplay])
 
   const { searchParams } = req.nextUrl
-  const title = searchParams.get('title') || 'A1ITFirm'
+  const title = searchParams.get('title') || 'A1 IT Firm'
 
   return new ImageResponse(
     (
@@ -27,12 +27,12 @@ export default async function handler(req) {
           justifyContent: 'center',
           backgroundColor: 'white',
           backgroundImage:
-            'linear-gradient(169.66deg, #226478 0%, #30c7b5 100%)',
+            'linear-gradient(315deg, #045de9 0%, #09c6f9 74%)',
         }}
       >
         <img
-          src={new URL('../../public/logo.png', import.meta.url).toString()}
-          alt="A1ITFirm Logo"
+          src={new URL('../../public/logo.svg', import.meta.url).toString()}
+          alt="A1 IT Firm Logo"
           tw="w-48 h-48 mb-4 opacity-95"
         />
         <h1

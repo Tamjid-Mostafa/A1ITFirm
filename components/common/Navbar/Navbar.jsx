@@ -52,9 +52,11 @@ const Navbar = () => {
             onClick={() => router.push('/')}
             className="flex items-center space-x-2 cursor-pointer"
           >
-            <Image width={32} height={32} className="" src="/logo.png" alt="" />
+            <Image width={60} height={60} className=" " src="/logo.svg" alt="" />
             <span className="self-center text-2xl whitespace-nowrap  text-accent-6">
-              A1ITFirm
+              <span>A1</span>
+              <span>IT</span>
+              <span>Firm</span>
             </span>
           </div>
 

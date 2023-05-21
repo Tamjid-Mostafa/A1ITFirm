@@ -208,7 +208,7 @@ export default function DemoForm() {
                   }
                 />
                 <label className="text-xs font-medium" htmlFor="check">
-                  I acknowledge that A1ITFirm uses my personal information in
+                  I acknowledge that A1 IT Firm uses my personal information in
                   accordance with its&nbsp;&nbsp;
                   <Link
                     href="/privacy-policy"

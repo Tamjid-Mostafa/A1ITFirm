@@ -3,8 +3,8 @@ import Head from "next/head";
 const DOMAIN = "https://a1itfirm.vercel.app";
 
 export default function Meta({
-    title = "A1ITFirm | Best Lead Generation Agency",
-    description = "A1ITFirm is a fast-growing start-up with a very talented and rapidly expanding team. We build hand picked lead list with 100% verified guaranty.",
+    title = "A1 IT Firm | Best Lead Generation Agency",
+    description = "A1 IT Firm is a fast-growing start-up with a very talented and rapidly expanding team. We build hand picked lead list with 100% verified guaranty.",
     image = `${DOMAIN}/api/og`,
 }) {
     return (

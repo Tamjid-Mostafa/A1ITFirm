@@ -33,7 +33,7 @@ const Login = () => {
       setLoading(true);
       setMessage("");
       await signIn(email, password);
-      hitToast("success", `Welcome to A1ITFirm`);
+      hitToast("success", `Welcome to A1 IT Firm`);
       router.push("/");
     } catch ({ errors }) {
       console.error(errors);
