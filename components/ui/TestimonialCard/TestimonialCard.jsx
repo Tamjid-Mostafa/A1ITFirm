@@ -4,6 +4,7 @@ import s from './TestimonialCard.module.css'
 import LeftQuote from '@components/icons/LeftQuote'
 import { RightQuote } from '@components/icons'
 import Image from 'next/image'
+import Avatar from '@components/common/Avatar'
 const TestimonialCard = ({ item }) => {
 
     return (
@@ -19,10 +20,11 @@ const TestimonialCard = ({ item }) => {
                 <div className='py-4 flex flex-col space-y-3 mx-5'>
                     <hr />
                     <div className={cn(s.avatar, '')}>
-                        <Image 
+                        {/* <Image 
                         width={64}
                         height={64}
-                        src={item?.avatar} alt={item?.name} />
+                        src={item?.avatar} alt={item?.name} /> */}
+                        <Avatar />
                         <div>
                             <div className={cn(s.name, '')}>
                                 {item?.name}
