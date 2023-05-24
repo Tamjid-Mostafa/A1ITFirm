@@ -8,8 +8,6 @@ import Meta from 'Meta/Meta'
 import LoadingDots from '@components/ui/LoadingDots'
 import dynamic from 'next/dynamic'
 import { useUI } from '@components/ui/context'
-import { ForgotPassword, LoginView, SignUpView } from '@components/auth'
-import PrivateRoute from 'Routes/PrivateRoute'
 const Layout = ({
   meta,
   children,

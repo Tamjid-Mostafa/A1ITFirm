@@ -73,11 +73,14 @@ const Proposal = () => {
         }
         try {
             const res = await axios.post('/api/proposals', data)
-            closeModal()
-            setDirty(true)
-            setDisabled(false)
-            setLoading(false)
-            hitToast('success', res.data.message)
+            
+            if (res.status === 200) {
+                setDirty(true)
+                setDisabled(false)
+                setLoading(false)
+                hitToast('success', res.data.message)
+                closeModal()
+            }
         } catch (err) {
             console.error(err)
             setMessage('Something went wrong')
