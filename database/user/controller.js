@@ -2,7 +2,6 @@
 
 import Proposal from "@models/Proposal"
 import User from "@models/User"
-import { sendEmail } from "helper/emailHelper"
 
 
 
@@ -61,19 +60,19 @@ export async function postProposal(req, res) {
     if (!formData)
       return res.status(404).json({ error: 'Form Data not Provided...!' });
 
-    const result = await Proposal.create(formData);
+    await Proposal.create(formData);
 
-    // Send an email to the user
-    const userEmail = formData.email;
-    const emailSubject = 'Your Proposal Has Been Submitted';
-    const emailContent = `
-      <h1>Proposal Submitted</h1>
-      <p>Hi ${formData.firstName},</p>
-      <p>Your proposal has been submitted successfully.</p>
-      <p>Thank you for choosing our service!</p>
-    `;
+    // // Send an email to the user
+    // const userEmail = formData.email;
+    // const emailSubject = 'Your Proposal Has Been Submitted';
+    // const emailContent = `
+    //   <h1>Proposal Submitted</h1>
+    //   <p>Hi ${formData.firstName},</p>
+    //   <p>Your proposal has been submitted successfully.</p>
+    //   <p>Thank you for choosing our service!</p>
+    // `;
 
-    await sendEmail(userEmail, emailSubject, emailContent);
+    // await sendEmail(userEmail, emailSubject, emailContent);
 
     res.status(200).json({ message: 'Proposal submitted successfully. We will contact you ASAP' });
   } catch (error) {
